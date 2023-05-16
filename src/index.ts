@@ -76,3 +76,21 @@ const objeto: Persona = {
 };
 
 const arr: Persona[] = [];
+
+//FUNCIONES
+const fn: (a: number) => string = (edad: number) => {
+  if (edad > 17) return "Puedes ingresar";
+  return "No puedes ingresar";
+};
+
+function validaEdad(edad: number, msg: string = "Oscar TG"): string {
+  if (edad > 17) return `Puedes ingresar ${msg}`;
+
+  return "No puedes pasar";
+}
+
+validaEdad(16, "Oliver TA");
+
+function erroUsuario(): never {
+  throw new Error("Error de usuario");
+}

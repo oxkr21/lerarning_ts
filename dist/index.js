@@ -32,6 +32,25 @@ const objeto = {
     id: 1,
     nombre: "Oscar TG",
     talla: Talla.Meidana,
+    direccion: {
+        numero: 219,
+        calle: "Nogal",
+        pais: "mx",
+    },
 };
-console.log(objeto);
+const arr = [];
+const fn = (edad) => {
+    if (edad > 17)
+        return "Puedes ingresar";
+    return "No puedes ingresar";
+};
+function validaEdad(edad, msg = "Oscar TG") {
+    if (edad > 17)
+        return `Puedes ingresar ${msg}`;
+    return "No puedes pasar";
+}
+validaEdad(16, "Oliver TA");
+function erroUsuario() {
+    throw new Error("Error de usuario");
+}
 //# sourceMappingURL=index.js.map
